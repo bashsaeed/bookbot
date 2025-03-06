@@ -23,7 +23,13 @@ def generate_report(path_to_file: str) -> None:
 
 
 def main() -> None:
-    path_to_file = "books/frankenstein.txt"
+    import sys
+
+    args: list[str] = sys.argv
+    if len(args) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    path_to_file: str = args[1]
     generate_report(path_to_file)
 
 
