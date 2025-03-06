@@ -11,3 +11,7 @@ def get_char_count(text: str) -> dict[str, int]:
         else:
             char_count[char] = 1
     return char_count
+
+
+def sort_dict_by_value(d: dict) -> list[dict[str, int]]:
+    return sorted(d.items(), key=lambda x: x[1], reverse=True)
